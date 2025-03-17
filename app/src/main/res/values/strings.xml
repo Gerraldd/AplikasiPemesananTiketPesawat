@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Praktikum_PemesananTiketPesawat</string>
+    <string name="pemesanan_tiket_pesawat">Pemesanan Tiket Pesawat</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="home">Home</string>
+    <string name="lihat">Lihat</string>
+    <string name="data_maskapai">Data\nMaskapai</string>
+    <string name="email">Email</string>
+    <string name="masukkan_password">Masukkan Password</string>
+    <string name="password">Password</string>
+    <string name="masukkan_email">Masukkan Email</string>
+    <string name="loginSubmit">Login</string>
+    <string name="masukkan_nama_lengkap">Masukkan Nama Lengkap</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="register_submit">Register</string>
+    <string name="konfirmasi_password">Konfirmasi Password</string>
+    <string name="maskapai_tersedia">Maskapai Tersedia</string>
+    <string name="cari_maskapai">Cari Maskapai</string>
+    <string name="pesan">Pesan</string>
+</resources>
+
+
