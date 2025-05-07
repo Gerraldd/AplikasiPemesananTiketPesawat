@@ -27,6 +27,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat datang User"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.142" />
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/airplane_card"
         android:layout_width="0dp"
@@ -47,10 +62,10 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:src="@drawable/pesawat"
-            tools:ignore="ContentDescription"
-            android:adjustViewBounds="true" />
+            tools:ignore="ContentDescription" />
 
     </com.google.android.material.card.MaterialCardView>
 
@@ -146,8 +161,8 @@
 
         <Button
             android:id="@+id/btnHome"
-            android:layout_width="300dp"
-            android:layout_height="47dp"
+            android:layout_width="167dp"
+            android:layout_height="46dp"
             android:backgroundTint="@color/blue"
             android:text="@string/home"
             android:textColor="@color/white"
@@ -155,6 +170,26 @@
             app:cornerRadius="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.036"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="167dp"
+            android:layout_height="46dp"
+            android:backgroundTint="@color/blue"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:cornerRadius="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toStartOf="parent"
