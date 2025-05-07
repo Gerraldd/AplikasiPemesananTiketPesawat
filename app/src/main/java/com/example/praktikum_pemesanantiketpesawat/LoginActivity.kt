@@ -16,6 +16,7 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var inputEmail: EditText
     private lateinit var inputPassword: EditText
+    private lateinit var btnLogin: Button
     private lateinit var belumPunyaAkun: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
 
         inputEmail = findViewById(R.id.inputEmail)
         inputPassword = findViewById(R.id.inputPassword)
+        btnLogin = findViewById(R.id.btnLogin)
         belumPunyaAkun = findViewById(R.id.belumPunyaAkun)
 
         belumPunyaAkun.setOnClickListener({
