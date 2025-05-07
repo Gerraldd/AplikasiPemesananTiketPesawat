@@ -65,12 +65,15 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.127" />
 
+            <!-- Input Email -->
             <EditText
-                android:id="@+id/emailInput"
+                android:id="@+id/inputEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_input"
                 android:hint="@string/masukkan_email"
+                android:autofillHints="emailAddress"
+                android:inputType="textEmailAddress"
                 android:padding="15dp"
                 android:textColor="@color/black"
                 android:textColorHint="#9a9696"
@@ -93,15 +96,18 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/emailInput"
+                app:layout_constraintTop_toBottomOf="@+id/inputEmail"
                 app:layout_constraintVertical_bias="0.041" />
 
+            <!-- Input Password -->
             <EditText
-                android:id="@+id/passwordInput"
+                android:id="@+id/inputPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_input"
                 android:hint="@string/masukkan_password"
+                android:autofillHints="password"
+                android:inputType="textPassword"
                 android:padding="15dp"
                 android:textColor="@color/black"
                 android:textColorHint="#9a9696"
@@ -113,6 +119,7 @@
                 app:layout_constraintVertical_bias="0.104" />
 
             <Button
+                android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -124,91 +131,36 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/passwordInput"
+                app:layout_constraintTop_toBottomOf="@+id/inputPassword"
                 app:layout_constraintVertical_bias="0.359" />
 
+            <TextView
+                android:id="@+id/belumPunyaAkun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:onClick="onClickTextView"
+                android:text="Belum punya akun? Register yuk!"
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/bottomNavBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/navbar"
-        android:padding="25dp"
-        android:foregroundGravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <Button
-            android:id="@+id/btnHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="@color/white"
-            android:text="@string/home"
-            android:textColor="@color/blue"
-            app:strokeColor="@color/blue"
-            app:strokeWidth="3dp"
-            app:cornerRadius="24dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btnLogin"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            tools:ignore="ButtonStyle" />
-
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="@color/blue"
-            android:text="@string/login"
-            android:textColor="@color/white"
-            app:cornerRadius="24dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/btnHome"
-            app:layout_constraintEnd_toStartOf="@id/btnRegister"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_weight="1"
-            tools:ignore="ButtonStyle" />
-
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:backgroundTint="@color/white"
-            android:text="@string/register"
-            android:textColor="@color/blue"
-            app:cornerRadius="24dp"
-            app:strokeColor="@color/blue"
-            app:strokeWidth="3dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/btnLogin"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_weight="1"
-            tools:ignore="ButtonStyle" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <ImageView
         android:id="@+id/imageViewProfile"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="106dp"
+        android:layout_height="109dp"
         android:background="@drawable/profile_icon_background"
         android:padding="20dp"
         android:src="@drawable/ic_profile"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomNavBar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

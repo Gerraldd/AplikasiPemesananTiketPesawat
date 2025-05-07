@@ -146,60 +146,22 @@
 
         <Button
             android:id="@+id/btnHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_width="300dp"
+            android:layout_height="47dp"
             android:backgroundTint="@color/blue"
             android:text="@string/home"
             android:textColor="@color/white"
-            app:cornerRadius="24dp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btnLogin"
-            app:layout_constraintTop_toTopOf="parent"
+            app:cornerRadius="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            tools:ignore="ButtonStyle" />
-
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="@color/white"
-            android:text="@string/login"
-            android:textColor="@color/blue"
-            app:cornerRadius="24dp"
-            app:strokeColor="@color/blue"
-            app:strokeWidth="3dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/btnHome"
-            app:layout_constraintEnd_toStartOf="@id/btnRegister"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_weight="1"
-            tools:ignore="ButtonStyle" />
-
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:backgroundTint="@color/white"
-            android:text="@string/register"
-            android:textColor="@color/blue"
-            app:cornerRadius="24dp"
-            app:strokeColor="@color/blue"
-            app:strokeWidth="3dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/btnLogin"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
             tools:ignore="ButtonStyle" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,30 +7,16 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MaskapaiActivity : AppCompatActivity() {
     private lateinit var btnHome: Button
-    private lateinit var btnLogin: Button
-    private lateinit var btnRegister: Button
     private lateinit var btnPesan: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maskapai)
         btnHome = findViewById(R.id.btnHome)
-        btnLogin = findViewById(R.id.btnLogin)
-        btnRegister = findViewById(R.id.btnRegister)
         btnPesan = findViewById(R.id.btnPesan)
 
         btnHome.setOnClickListener({
             val intent = Intent(this@MaskapaiActivity, MainActivity::class.java)
-            startActivity(intent)
-        })
-
-        btnLogin.setOnClickListener({
-            val intent = Intent(this@MaskapaiActivity, LoginActivity::class.java)
-            startActivity(intent)
-        })
-
-        btnRegister.setOnClickListener({
-            val intent = Intent(this@MaskapaiActivity, RegisterActivity::class.java)
             startActivity(intent)
         })
 
